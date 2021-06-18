@@ -1,0 +1,39 @@
+import random
+
+#players choice
+choice = input("What is your choice 'rock','paper', or 'scissors'!: ")
+if choice in 'rock':
+  print("You chose rock")
+if choice in 'paper':
+  print("You chose paper")
+if choice in 'scissors':
+  print("You chose scissors")
+
+#computers choice
+x = ('rock', 'paper', 'scissors')
+computer_choice = (random.choice(x))
+print("Computer has chosen: " + computer_choice +'')
+#rock choices
+if choice in 'rock, r, ROCK' and computer_choice in 'rock':
+  print("tye")
+if choice in 'rock, r, ROCK' and computer_choice in 'paper':
+  print("You lose computer wins!")
+if choice in 'rock, r, ROCK' and computer_choice in 'scissors':
+  print("You win computer loses!")
+
+#paper choices
+if choice in 'paper, p, PAPER, Paper' and computer_choice in 'rock':
+  print("You win computer loses!")
+if choice in 'paper, p, PAPER, Paper' and computer_choice in 'paper':
+  print("TYE")
+if choice in 'paper, p, PAPER, Paper' and computer_choice in 'scissors':
+  print("You lose computer wins!")
+
+#scissors choices
+if choice in 'scissors, s, S, SCISSORS, Scissors' and computer_choice in 'rock':
+  print("You lose computer wins!")
+if choice in ' scissors, s, S, SCISSORS, Scissors' and computer_choice in 'paper':
+  print("You win computer loses!")
+if choice in 'scissors, s, S, SCISSORS, Scissors' and computer_choice in 'scissors':
+  print("TYE")
+print("Thankyou for playing!!")
